@@ -231,7 +231,7 @@ ul#secondary-menu a:hover {
 
 .sideContent { position:absolute; top:30px; width:240px; padding: 0; margin:0 0 0 610px;}
 
-.node-type-page #page-title{ font-size:54px; line-height:60px; margin-bottom:10px;}
+.node-type-page #page-title{ font-size:30px; line-height:60px; margin-bottom:10px;}
 .mainContent .fragement { margin-top:40px;}
 .mainContent h2 { font-size:36px; line-height:40px; margin-bottom:5px; font-family:'Melbourne_reg',sans-serif; color:#2F83CB;}
 .mainContent p, .sideContent p { margin-bottom:15px; font-size:18px; line-height:21px; color:#666666;}
