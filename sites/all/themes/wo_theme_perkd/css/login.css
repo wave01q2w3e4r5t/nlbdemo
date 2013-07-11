@@ -124,5 +124,7 @@ div.status {
 #user-login, #user-pass { padding-top:20px;}
 
 #footer {padding-top:25px !important; width:auto !important; color:#454545 !important;
+background-image: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#000000), to(#191919));
+background-image: -moz-linear-gradient(center top, #000000 0%, #191919 20%); text-shadow:#000000 -1px -1px !important;}
 #footer a { color: #454545 !important;}
 #footer .wismaLogo {background:url('http://mars.waveo.com/mapp/wisma/direct/logo.png') 0 0 no-repeat !important;}
