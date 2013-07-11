@@ -1,0 +1,72 @@
+<?php 
+
+/**
+ * Implements hook_menu()
+ */
+function waveo_api_menu() {
+  $items = array();
+  $items['IssueCard/submit'] = array(
+      'title' => t('Issue Card From Submit'),
+      'page callback' => 'waveo_api_issue_card_submit',
+      'page arguments' => array(),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+  );
+  $items['issueOffer/submit'] = array(
+      'title' => t('Issue Offer From Submit'),
+      'page callback' => 'waveo_api_issue_offer_submit',
+      'page arguments' => array(),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+  );
+  $items['userAction/submit'] = array(
+      'title' => t('Track User Action From Submit'),
+      'page callback' => 'waveo_api_track_user_action_submit',
+      'page arguments' => array(),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function waveo_api_issue_card_submit() {
+  
+  $parameter   = array();
+  $parameter['cardMasterId'] = $_POST['card_master_id'];
+  $parameter['countryCode']  = $_POST['country_code'];
+  $parameter['mobileNumber'] = $_POST['mobile_number'];
+  $parameter['nric']         = $_POST['nric'];
+  $parameter['familyName']   = $_POST['family_name'];
+  $parameter['givenName']    = $_POST['given_name'];
+  $options  = array(
+      'method'  => 'POST',
+      'headers' => array(
+          'Content-Type' => 'application/json;charset=utf-8',
+      ),
+      'data' => json_encode($parameter),
+  );
+  $request_url = 'https://api.waveo.com/test/v1/card_1/issue?oauth_consumer_key=zwXgebFqNLtamLMeT6zopNrhZYkPsqys';
+  $response    = drupal_http_request($request_url, $options);
+  if ('4FF26D7C' == $_POST['card_master_id']) {
+    $card_name = 'Library Card (For Foreigners)';
+  } elseif ('DK3MA8HJ' == $_POST['card_master_id']) {
+    $card_name = 'Library@Orchard Card';
+  }
+  drupal_goto("IssueCard");
+  if ('200' == $response->code) {
+    print_r('<h2 style="font-family: Helvetica, Arial, sans-serif;">' . $card_name . ' has been issued to mobile ' . $parameter['countryCode'] . $parameter['mobileNumber'] . '</h2>');
+  } else {
+    print_r('<h2 style="font-family: Helvetica, Arial, sans-serif;">' . $card_name . ' issue unsuccessful' . '</h2>');
+  }
+}
+
+
+function waveo_api_issue_offer_submit() {
+  
+}
+
+
+
+function waveo_api_track_user_action_submit() {
+  
+}

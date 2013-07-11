@@ -1,0 +1,5 @@
+name = WaveO API
+description = Dev by QianQian
+package = WaveO
+version = "7.x-2.0-alpha"
+core = 7.x
