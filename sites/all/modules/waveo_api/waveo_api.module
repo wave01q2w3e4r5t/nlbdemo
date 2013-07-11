@@ -80,9 +80,9 @@ function waveo_api_issue_offer_submit() {
     $offer_name = 'rainforest moisture shampoo';
   }
   if ('200' == $response->code) {
-    drupal_set_message("{$offer_name} offer has been issued to mobile {$parameter['countryCode']} {$parameter['mobileNumber']}");
+    drupal_set_message("Free {$offer_name} offer has been issued to mobile {$parameter['countryCode']} {$parameter['mobileNumber']}");
   } else {
-    drupal_set_message("Free {$offer_name} offer issue unsuccessful");
+    drupal_set_message("Free {$offer_name} offer issue unsuccessful", 'error');
   }
   drupal_goto("issueOffer");
 }
@@ -126,7 +126,7 @@ function waveo_api_track_user_action_submit() {
   if ('200' == $response->code) {
     drupal_set_message("One {$stamp_name} book genre stamp has been issued to mobile {$parameter['countryCode']} {$parameter['mobileNumber']}");
   } else {
-    drupal_set_message("$stamp_name book genre stamp issue unsuccessful");
+    drupal_set_message("$stamp_name book genre stamp issue unsuccessful", 'error');
   }
   drupal_goto("userAction");
 }
