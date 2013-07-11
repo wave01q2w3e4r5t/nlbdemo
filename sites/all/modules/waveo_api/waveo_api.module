@@ -54,9 +54,9 @@ function waveo_api_issue_card_submit() {
   }
   drupal_goto("IssueCard");
   if ('200' == $response->code) {
-    print_r('<h2 style="font-family: Helvetica, Arial, sans-serif;">' . $card_name . ' has been issued to mobile ' . $parameter['countryCode'] . $parameter['mobileNumber'] . '</h2>');
+    drupal_set_message("{$card_name} has been issued to mobile {$parameter['countryCode']} {$parameter['mobileNumber']}");
   } else {
-    print_r('<h2 style="font-family: Helvetica, Arial, sans-serif;">' . $card_name . ' issue unsuccessful' . '</h2>');
+    drupal_set_message("$card_name issue unsuccessful", 'error');
   }
 }
 
