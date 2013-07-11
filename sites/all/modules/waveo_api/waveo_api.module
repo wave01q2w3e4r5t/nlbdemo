@@ -141,10 +141,11 @@ function waveo_api_track_user_action_submit() {
 
 function waveo_api_clear_data_submit() {
   $forceDelete  = $_POST['force_delete'];
-  $request_url = "http://nlbdemo.perkd.me/api/clear/accouns/$forceDelete";
+  $request_url = "http://nlbdemo.perkd.me/api/clear/accounts/$forceDelete";
   watchdog('QQ - CLear Data Callback', $request_url);
   $response    = drupal_http_request($request_url);
   if('200' == $response->code) {
+    watchdog('QQ - CLear Data Callback', print_r($response, true));
     $data = json_decode($response->data, true);
     watchdog('QQ - CLear Data Callback', print_r($data, true));
     if('N' === $data['flag']) {
