@@ -1,0 +1,4 @@
+name = WaveO THEME Perkd
+core = 7.x
+engine      = phptemplate
+stylesheets[all][] = css/style.css
