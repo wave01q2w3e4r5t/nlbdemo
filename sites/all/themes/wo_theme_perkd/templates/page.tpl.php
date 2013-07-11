@@ -70,12 +70,11 @@
 <?php
 global $user;
 $isLogged = FALSE;
+$host = 'http://'.$_SERVER['HTTP_HOST'];
 if( !$user->uid ){
 	
 	if( (! (strpos($_SERVER['REQUEST_URI'], '/user') === 0) || $_SERVER['REQUEST_URI'] == '/user/logout' ) ){
-		//drupal_set_message('Please Login.','status');
 		
-		$host = 'http://'.$_SERVER['HTTP_HOST'];
 		header("Location:{$host}/user");
 	}else{
 		drupal_add_css(path_to_theme() . '/css/login.css');
@@ -83,6 +82,7 @@ if( !$user->uid ){
 }else{
 	$isLogged = TRUE;
 	$secondary_menu['menu-2']['title']='Hello '.$user->name;
+	header("Location:{$host}/issueCard");
 }
 
 ?>
