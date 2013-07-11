@@ -166,5 +166,4 @@ if( !$user->uid ){
     <div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
-<a href="https://mixpanel.com/f/partner"><img src="https://cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
   </div></div> <!-- /#page, /#page-wrapper -->
