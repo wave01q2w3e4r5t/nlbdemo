@@ -52,12 +52,12 @@ function waveo_api_issue_card_submit() {
   } elseif ('DK3MA8HJ' == $_POST['card_master_id']) {
     $card_name = 'Library@Orchard Card';
   }
-  drupal_goto("IssueCard");
   if ('200' == $response->code) {
     drupal_set_message("{$card_name} has been issued to mobile {$parameter['countryCode']} {$parameter['mobileNumber']}");
   } else {
     drupal_set_message("$card_name issue unsuccessful", 'error');
   }
+  drupal_goto("IssueCard");
 }
 
 
