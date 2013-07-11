@@ -142,9 +142,11 @@ function waveo_api_track_user_action_submit() {
 function waveo_api_clear_data_submit() {
   $forceDelete  = $_POST['force_delete'];
   $request_url = "http://nlbdemo.perkd.me/api/clear/accouns/$forceDelete";
+  watchdog('QQ - CLear Data Callback', $request_url);
   $response    = drupal_http_request($request_url);
   if('200' == $response->code) {
     $data = json_decode($response->data, true);
+    watchdog('QQ - CLear Data Callback', print_r($data, true));
     if('N' === $data['flag']) {
       drupal_set_message("You have no permission to do this action", 'error');
     }else{
