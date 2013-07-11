@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin:0;
 }
 legend {padding: 0;}
-a {color:#F47A20;  text-decoration:none !important; }
+a {color:#0046b0;  text-decoration:none !important; }
 #skip-link {display: none;}
 
 /* header logo */
@@ -115,8 +115,8 @@ ol.search-results { margin:30px 0 0; padding:0;}
   -moz-border-radius: 6px;
   border-radius: 6px;
   height: 40px;
-  border: 1px solid #F47A20;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F47A20), to(#F47A20));
+  border: 1px solid #0046b0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0046b0), to(#F47A20));
   background: -moz-linear-gradient(top, #54aef2, #2f83cb);
   background-image: -ms-linear-gradient(top, #54aef2 0%, #2f83cb 100%); /* IE9 */
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#54aef2', EndColorStr='#2f83cb'); /* IE6,IE7 */
@@ -138,9 +138,9 @@ ul#main-menu li a {
   font-family:'Melbourne_reg';
   text-shadow: rgba(0,0,0,0.2) -1px -1px;
 }
-ul#main-menu li:hover {background:#F47A20;}
+ul#main-menu li:hover {background:#0046b0;}
 ul#main-menu li.active{
-  background:#F47A20;
+  background:#0046b0;
     -moz-box-shadow:0 1px 35px rgba(0, 0, 0, 0.52) inset;
     -webkit-box-shadow:0 1px 35px rgba(0, 0, 0, 0.52) inset;
     box-shadow:0 1px 35px rgba(0, 0, 0, 0.52) inset; text-shadow: rgba(0,0,0,0.2) -1px -1px;
@@ -313,7 +313,7 @@ ul.primary li a:hover { color:#0088cc;
 ul.primary li a.active { color:#fff; cursor:default; text-decoration:none; border:1px solid transparent; border:1px solid #0088cc\9;
     -moz-box-shadow:0 1px 9px rgba(0, 0, 0, 0.52) inset; -webkit-box-shadow:0 1px 9px rgba(0, 0, 0, 0.52) inset;
   box-shadow:0 1px 20px rgba(0, 0, 0, 0.52) inset;
-    background: #F47A20;
+    background: #0046b0;
   background-image: -ms-linear-gradient(top, #1b4d78 0%, #2F83CB 100%); /* IE9 */
   filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#1b4d78', EndColorStr='#2F83CB'); /* IE6,IE7 */
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#1b4d78', EndColorStr='#2F83CB')"; /* IE8 */
@@ -325,7 +325,7 @@ ul.primary li a.active { color:#fff; cursor:default; text-decoration:none; borde
   font-size: 32px;
   line-height:36px;
   margin: 0 180px 0 0;
-  color:#F47A20;
+  color:#0046b0;
 }
 #page-title em {
   padding-right: 10px;
@@ -467,11 +467,11 @@ td.views-field-title {
   border-radius: 5px;
   border: solid 1px #da7c0c;
   background: #2f83cb;
-  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
-  background: -moz-linear-gradient(top, #faa51a, #f47a20);
-  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#f47a20'); /* IE6,IE7 */
--ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#f47a20')"; /* IE8 */
-  background-image: -ms-linear-gradient(top, #faa51a 0%, #f47a20 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#0046b0));
+  background: -moz-linear-gradient(top, #faa51a, #0046b0);
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#0046b0'); /* IE6,IE7 */
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#faa51a', EndColorStr='#0046b0')"; /* IE8 */
+  background-image: -ms-linear-gradient(top, #faa51a 0%, #0046b0 100%);
 }
 .form-submit, .linkBtn {
   height:30px;
@@ -494,8 +494,8 @@ td.views-field-title {
 .manualcrop-button, .manualcrop-button:hover { margin: 0 10px 0 0;  font-size: 14px !important; padding: 0 10px;}
 .form-submit:hover, .linkBtn:hover, .manualcrop-button:hover {text-shadow: 0 1px #FFFFFF; color: #454545;}
 .form-submit:active, .linkBtn:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
-  background-image: -moz-linear-gradient(100% 100% 90deg, #faa51a, #f47a20);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0046b0), to(#faa51a));
+  background-image: -moz-linear-gradient(100% 100% 90deg, #faa51a, #0046b0);
   text-shadow: 0 1px #FFFFFF;  color: #454545;}
 
 /* form style common layout */
