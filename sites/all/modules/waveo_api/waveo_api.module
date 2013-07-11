@@ -26,6 +26,13 @@ function waveo_api_menu() {
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
   );
+  $items['clearData/submit'] = array(
+      'title' => t('Clear Testing Data From Submit'),
+      'page callback' => 'waveo_api_clear_data_submit',
+      'page arguments' => array(),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+  );
   return $items;
 }
 
@@ -129,4 +136,29 @@ function waveo_api_track_user_action_submit() {
     drupal_set_message("$stamp_name book genre stamp issue unsuccessful", 'error');
   }
   drupal_goto("userAction");
+}
+
+
+function waveo_api_clear_data_submit() {
+  $request_url = 'http://nlbdemo.perkd.me/api/clear/accouns';
+  $response    = drupal_http_request($request_url);
+  if('200' == $response->code) {
+    $data = json_decode($response->data, true);
+    if('N' === $data['flag']) {
+      drupal_set_message("You have no permission to do this action", 'error');
+    }else{
+      //not logout mobiles
+      $mobiles = $data['mobile'];
+      if(empty($mobiles)) {
+        drupal_set_message("All {$data['total']} accounts were cleared successfully");
+      }else{
+        $mobile_str = implode(',', $mobiles);
+        $cleared    = $data['total'] - count($mobiles);
+        drupal_set_message("$cleared accounts were cleared successfully, yet logout mobile: [{$mobile_str}]", 'error');
+      }
+    }
+  }else{
+    drupal_set_message("You have no permission to do this action", 'error');
+  }
+  drupal_goto("clearData");
 }
